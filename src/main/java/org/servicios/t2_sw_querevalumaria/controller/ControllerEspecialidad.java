@@ -17,7 +17,7 @@ public class ControllerEspecialidad {
     @Autowired
     private EspecialidadService especialidadService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarEspecialidad")
     public ResponseEntity<List<Especialidad>> findAll() {
 
         return new ResponseEntity<>(especialidadService.findAll(), HttpStatus.OK);

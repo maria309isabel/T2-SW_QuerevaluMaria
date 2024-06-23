@@ -17,7 +17,7 @@ public class ControllerMedico {
 
     private MedicoService medicoService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarMedico")
     public ResponseEntity<List<Medico>> findAll() {
 
         return new ResponseEntity<>(medicoService.findAll(), HttpStatus.OK);

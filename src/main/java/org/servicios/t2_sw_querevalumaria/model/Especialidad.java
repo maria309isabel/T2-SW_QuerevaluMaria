@@ -8,7 +8,8 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Table(name = "Especialidad")
+@Entity
+
 
 public class Especialidad {
 

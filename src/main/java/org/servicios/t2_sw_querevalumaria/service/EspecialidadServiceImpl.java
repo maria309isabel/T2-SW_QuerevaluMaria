@@ -27,7 +27,7 @@ public class EspecialidadServiceImpl implements EspecialidadService {
     @Override
     public List<Especialidad> findAll() {
 
-        return (List<Especialidad>) especialidadRepository.findAll();
+        return especialidadRepository.findAll();
 
     }
 
