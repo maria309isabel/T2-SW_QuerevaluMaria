@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: mysql:3306
--- Tiempo de generación: 23-06-2024 a las 17:53:54
+-- Tiempo de generación: 23-06-2024 a las 18:03:04
 -- Versión del servidor: 8.0.37
 -- Versión de PHP: 8.0.27
 
@@ -46,6 +46,30 @@ INSERT INTO `Especialidad` (`IdEspecialidad`, `Titulo`, `Funcion`, `FechGraduaci
 (4, 'Cardiología', 'Atender a pacientes con problemas cardíacos', '2006-12-20', 4),
 (5, 'Dermatología', 'Tratar enfermedades de la piel', '2007-04-10', 5);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Medico`
+--
+
+CREATE TABLE `Medico` (
+  `IdMedico` int NOT NULL,
+  `NomMedico` varchar(50) NOT NULL,
+  `ApeMedico` varchar(50) NOT NULL,
+  `FechNacMedico` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `Medico`
+--
+
+INSERT INTO `Medico` (`IdMedico`, `NomMedico`, `ApeMedico`, `FechNacMedico`) VALUES
+(1, 'Juan', 'García', '1980-05-15'),
+(2, 'María', 'López', '1975-09-23'),
+(3, 'Luis', 'Martínez', '1982-12-10'),
+(4, 'Ana', 'Rodríguez', '1978-07-30'),
+(5, 'Pedro', 'Fernández', '1985-03-20');
+
 --
 -- Índices para tablas volcadas
 --
@@ -58,6 +82,12 @@ ALTER TABLE `Especialidad`
   ADD KEY `IdMedico` (`IdMedico`);
 
 --
+-- Indices de la tabla `Medico`
+--
+ALTER TABLE `Medico`
+  ADD PRIMARY KEY (`IdMedico`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -66,6 +96,12 @@ ALTER TABLE `Especialidad`
 --
 ALTER TABLE `Especialidad`
   MODIFY `IdEspecialidad` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `Medico`
+--
+ALTER TABLE `Medico`
+  MODIFY `IdMedico` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
