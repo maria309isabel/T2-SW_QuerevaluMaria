@@ -1,4 +1,7 @@
 package org.servicios.t2_sw_querevalumaria.repository;
 
-public interface EspecialidadRepository {
+import org.servicios.t2_sw_querevalumaria.model.Especialidad;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EspecialidadRepository extends JpaRepository<Especialidad, Integer> {
 }
